@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # We want to use packages from the binary cache
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05"; # We want to use packages from the binary cache
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -29,7 +29,7 @@
         ];
 
         # LD_LIBRARY_PATH = lib.makeLibraryPath [pkgs.stdenv.cc.cc];
-        LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
+        #LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
       };
     });
 }
